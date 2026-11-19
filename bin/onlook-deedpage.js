@@ -39,7 +39,7 @@ async function main() {
     return console.log(JSON.stringify({ ...out, token_saved_to: saved }, null, 2));
   }
   if (saved) console.error(`New owner token saved to ${saved} (mode 600). Keep it: it is the only key to update or delete this site.`);
-  console.error(`${res.version}. Update later with: onlook-deedpage ${rest[0]} --slug ${res.slug}`);
+  console.error(`${res.version}. Update later with: onlook-deedpage ${/\s/.test(rest[0]) ? JSON.stringify(rest[0]) : rest[0]} --slug ${res.slug}`);
   console.log(res.url);
 }
 
