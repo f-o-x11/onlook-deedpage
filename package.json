@@ -1,0 +1,20 @@
+{
+  "name": "onlook-deedpage",
+  "version": "0.1.0",
+  "description": "Publish an Onlook HTML export (or any HTML file) to a permanent https://<slug>.deed.page/ URL from the command line.",
+  "keywords": ["onlook", "deed.page", "publish", "deploy", "html", "static-hosting", "cli"],
+  "homepage": "https://github.com/f-o-x11/onlook-deedpage#readme",
+  "bugs": { "url": "https://github.com/f-o-x11/onlook-deedpage/issues", "email": "ops@avatar33.com" },
+  "repository": { "type": "git", "url": "git+https://github.com/f-o-x11/onlook-deedpage.git" },
+  "license": "MIT",
+  "author": "Avatar 8 LLC <ops@avatar33.com> (https://deed.page)",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js", "./package.json": "./package.json" },
+  "bin": { "onlook-deedpage": "bin/onlook-deedpage.js" },
+  "files": ["bin/", "src/", "README.md", "LICENSE"],
+  "dependencies": { "deed-page-deploy": "^0.1.0" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" },
+  "publishConfig": { "access": "public" }
+}
